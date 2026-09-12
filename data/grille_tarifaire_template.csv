@@ -1,0 +1,12 @@
+operateur,type_operation,montant_min,montant_max,frais_fixe,frais_pourcentage,date_maj,source
+Wave,transfert,1,500000,0,0.01,2026-06-26,MomoCalc (source wave.com)
+Wave,transfert,500001,,5000,0,2026-06-26,MomoCalc (source wave.com)
+Wave,retrait,1,,0,0,2026-06-26,MomoCalc (source wave.com)
+Wave,depot,1,,0,0,2026-09-12,site officiel wave.com
+Orange Money,transfert,1,562500,0,0.008,2026-09-12,orange.sn (annonce officielle "Baisse tarifs")
+Orange Money,transfert,562501,,4500,0,2026-09-12,orange.sn (annonce officielle "Baisse tarifs")
+Orange Money,retrait,1,,0,0,2026-09-12,orange.sn (annonce officielle "Baisse tarifs")
+Orange Money,depot,1,,0,0,2026-09-12,expérience personnelle utilisatrice (dépôt régulier, confirmé gratuit)
+Yas (Mixx by Yas),transfert,1,,0,0,2026-09-12,mixx.sn (grille officielle "Émission - Transfert national")
+Yas (Mixx by Yas),retrait,1,,0,0.01,2026-09-12,mixx.sn (grille officielle — taux incluant déjà 0.5% TTA)
+Yas (Mixx by Yas),depot,1,,0,0,2026-09-12,mixx.sn FAQ officielle ("Le dépôt d'argent avec Mixx est gratuit")
