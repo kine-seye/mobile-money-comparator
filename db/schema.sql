@@ -18,8 +18,12 @@ create table grille_tarifaire(
 	montant_max numeric(10,2),
 	frais_fixe numeric(10,2) default 0,
 	frais_pourcentage numeric (5,4) default 0,
-	dat_j date not null default current_date
+	dat_maj date not null default current_date,
+	source VARCHAR(255)
 );
 
+
+CREATE INDEX idx_grille_lookup
+    ON grille_tarifaire (type_operation_id, montant_min, montant_max);
 	
 	
