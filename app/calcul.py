@@ -1,5 +1,5 @@
 
-print("LE FICHIER EST BIEN EXECUTE")
+
 
 def trouver_tranche(cur, operateur_id, type_operation_id, montant):
     cur.execute("""
