@@ -6,6 +6,14 @@ from calcul import comparer_operateurs
 
 load_dotenv()
 app = FastAPI(title="Comparateur Mobile Money Sénégal")
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_connexion():
     return psycopg2.connect(
