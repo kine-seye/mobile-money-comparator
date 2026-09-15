@@ -21,11 +21,15 @@ TAUX_TTA = 0.005
 PLAFOND_TTA = 2000
 
 def calculer_tta(montant, operateur_nom, type_operation_nom):
-    # Cas particulier : chez Yas, la TTA est déjà incluse dans le taux de retrait affiché
-    if operateur_nom == "Yas (Mixx by Yas)" and type_operation_nom == "retrait":
+    # La TTA (Loi 2025-17) s'applique légalement aux transferts, paiements et retraits — PAS au dépôt.
+    # Seul Orange Money a confirmé officiellement la collecter.
+    # Wave : aucune TTA constatée en usage réel, sur aucune opération.
+    # Yas : la TTA est déjà incluse dans le taux de retrait affiché (1%).
+    if type_operation_nom == "depot":
         return 0
-    return min(float(montant) * TAUX_TTA, PLAFOND_TTA)
-
+    if operateur_nom == "Orange Money":
+        return min(float(montant) * TAUX_TTA, PLAFOND_TTA)
+    return 0
 def calculer_frais_total(cur, operateur_id, operateur_nom, type_operation_id, type_operation_nom, montant):
     tranche = trouver_tranche(cur, operateur_id, type_operation_id, montant)
     if tranche is None:
