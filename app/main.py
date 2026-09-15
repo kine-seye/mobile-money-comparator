@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI, HTTPException
 import psycopg2
 from dotenv import load_dotenv
-from calcul import comparer_operateurs
+from app.calcul import comparer_operateurs
 
 load_dotenv()
 app = FastAPI(title="Comparateur Mobile Money Sénégal")
